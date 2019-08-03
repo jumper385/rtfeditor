@@ -28,7 +28,6 @@ class RTFEditor extends Editor {
 		this.onChange = (event) => this.setState({editorState: event})
 		this.makeBold = () => this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'))
 		this.makeItalic = () => this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'))
-		this.makeUnderlined = () => this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINED'))
 	}
 	render() {
 		return (
@@ -37,7 +36,6 @@ class RTFEditor extends Editor {
 				<ControlContainer>
 					<StyleButton onClick={this.makeBold}>Bold</StyleButton>
 					<StyleButton onClick={this.makeItalic}>Italic</StyleButton>
-					<StyleButton onClick={this.makeUnderlined}>Underlined</StyleButton>
 				</ControlContainer>
 				<EditorContainer>
 					<Editor 
